@@ -1,1 +1,1 @@
-# Learning JS Async Await
+# Learning Modern JavaScript

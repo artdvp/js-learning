@@ -103,9 +103,15 @@ console.log(
     `A string containing the ${nextnumber}..`;
   })
 );
+// [ undefined, undefined, undefined ]
 
 // good
 console.log([1, 2, 3].map(number => `A string containing the ${number}.`));
+/*
+[ 'A string containing the 1.',
+  'A string containing the 2.',
+  'A string containing the 3.' ]
+*/
 
 // good
 console.log(
@@ -114,6 +120,11 @@ console.log(
     return `A string containing the ${nextNumber}`;
   })
 );
+/*
+[ 'A string containing the 2',
+  'A string containing the 3',
+  'A string containing the 4' ]
+*/
 
 // good
 console.log(
@@ -121,3 +132,35 @@ console.log(
     index: number
   }))
 );
+// [ { index: 1 }, { index: 2 }, { index: 3 } ]
+
+/**
+ * Style Guide #11. if your function takes a single argument and dose't use braces, omit the parentheses. Otherwise, always include parentheses around arguments.
+ */
+// good
+console.log([1, 2, 3, 4].map(x => x * x));
+// [ 1, 4, 9, 16 ]
+
+// good
+console.log(
+  [1, 2, 3, 4].map(
+    number =>
+      `A long string with the ${number}. It's so long that we've broken it` +
+      "over multiple lines!"
+  )
+);
+/*
+[ 'A long string with the 1. It\'s so long that we\'ve broken itover multiple lines!',
+  'A long string with the 2. It\'s so long that we\'ve broken itover multiple lines!',
+  'A long string with the 3. It\'s so long that we\'ve broken itover multiple lines!',
+  'A long string with the 4. It\'s so long that we\'ve broken itover multiple lines!' ]
+*/
+
+// good
+console.log(
+  [1, 2, 3].map(x => {
+    const y = x + 1;
+    return x * y;
+  })
+);
+// [ 2, 6, 12 ]

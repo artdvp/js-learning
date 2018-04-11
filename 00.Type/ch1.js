@@ -35,3 +35,10 @@ console.log(typeof unknown);
 let number3 = number2;
 number3 = 10;
 console.log(number2, number3);
+/**
+ * Control Flow
+ */
+
+// in browser
+ let theNumber = Number(prompt("Pick a number"));
+console.log("Your number is the quare root of " + theNumber * theNumber);

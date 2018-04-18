@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clipboard.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+
+</head>
+
+<body>
+    <span id="copy">This text will be copied</span>
+    <button class="clipboard" data-clipboard-target="#copy">
+        Copy this
+    </button>
+    <script src="clipboard.min.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.clipboard');
+
+        clipboard.on('success', function (e) {
+            console.info('Action', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+
+        });
+
+        clipboard.on('error', function (e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        });
+    </script>
+</body>
+
+</html>

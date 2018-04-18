@@ -1,0 +1,14 @@
+{
+  "name": "xx-js-library-clipboardjs",
+  "version": "1.0.0",
+  "description": "src : [https://clipboardjs.com/](https://clipboardjs.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard": "^2.0.0"
+  }
+}

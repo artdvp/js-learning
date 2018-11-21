@@ -1,8 +1,7 @@
 // conditional
 let theNumber = Number(10);
 if (!Number.isNaN(theNumber)) {
-    console.log("Your number is the square root of " +
-        theNumber * theNumber);
+    console.log("Your number is the square root of " + theNumber * theNumber);
 } else {
     console.log("Hey. Why didn't you give me a number?");
 }
